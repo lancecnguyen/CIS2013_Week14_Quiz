@@ -1,3 +1,6 @@
+#ifndef PERSON_CPP
+#define PERSON_CPP
+
 #include <string>
 #include "Card.cpp"
 
@@ -25,3 +28,4 @@ class Person{
 		// Getters
 		string get_name(){ return name;}
 };
+#endif

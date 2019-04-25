@@ -1,4 +1,5 @@
-#include <iostream>
+#ifndef CARD_CPP
+#define CARD_CPP
 #include <string>
 
 using namespace std;
@@ -27,3 +28,4 @@ class Card{
 		int get_weight() { return weight;}
 		
 };
+#endif
