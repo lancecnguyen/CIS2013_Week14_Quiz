@@ -12,14 +12,30 @@ class Card{
 		char value;
 		int weight;
 		bool is_used;
+		
+		void set_weight(char w) { 
+			switch (w){
+					case 'A':
+						weight = 11;
+						break;
+					case 'J' || 'Q' || 'K';
+						weight = 10;
+						break;	
+					default:
+					weight = (int)w;
+			}
+		}
 	
 	public:
 		
 		// Setters
 		void set_suite(string s) { suite = s;}
-		void set_value(char v) { value = v;}
+		void set_value(char v) { 
+			 value = v;
+			 set_weight(v);
+		}
 		void set_used(bool u) { is_used = u;}
-		void set_weight(int w) { weight = w;}
+
 		
 		// Getters
 		string get_suite() { return suite;}
